@@ -1,0 +1,1546 @@
+@charset "UTF-8";
+/* Body */
+html {
+	background-color: #fff;
+}
+body {
+	font-family: source-sans-pro;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+	font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+.overflow {
+    overflow: hidden;
+}
+.flotL {
+	float: left;
+}
+.flotR {
+	float: right;
+}
+.SPbr{
+	display: none;
+}
+.mgn-btm03em {
+	margin-bottom: 0.3em;
+}
+.mgn-btm1em {
+	margin-bottom: 1em;
+}
+.mgn-btm15em {
+	margin-bottom: 1.5em;
+}
+.mgn-btm2em {
+	margin-bottom: 2em;
+}
+.mgn-btm3em {
+	margin-bottom: 3em;
+}
+.mgn-btm4em {
+	margin-bottom: 4em;
+}
+.mgn-btm5em {
+	margin-bottom: 5em;
+}
+.pdg-top05em {
+	padding-top: 0.5em;
+}
+.pdg-top1em {
+	padding-top: 1em;
+}
+.pdg-top2em {
+	padding-top: 2em;
+}
+.pdg-top3em {
+	padding-top: 3em;
+}
+.pdg-top4em {
+	padding-top: 4em;
+}
+.pdg-top8em {
+	padding-top: 8em;
+}
+.pdg-top9em {
+	padding-top: 9em;
+}
+.pdg-btm1em {
+	padding-bottom: 1em;
+}
+.pdg-btm15em {
+	padding-bottom: 1.5em;
+}
+.pdg-btm2em {
+	padding-bottom: 2em;
+}
+.pdg-btm3em {
+	padding-bottom: 3em;
+}
+.pdg-btm4em {
+	padding-bottom: 4em;
+}
+.pdg-btm5em {
+	padding-bottom: 5em;
+}
+/* Container */
+.block-two {
+	background-color: #ffffeb;
+}
+/* -=-=-=- PCメニュー -=-=-=- */
+.PCmenu {
+	width: 1000px;
+    margin: 0 auto;
+	height: 48px;
+	background-color: #fff;
+    
+}
+.PCmenu h1 {
+	float: left;
+	position: relative;
+	left: 20px;
+	top: 11px;
+}
+
+.PCmenu #PCnav {
+	overflow: hidden;
+    margin-left: 350px;
+}
+.PCmenu li {
+	float: left;
+	margin-left: 10px;
+	font-size: 14px;
+    line-height: 48px;
+}
+.PCmenu li a {
+	text-decoration: none;
+	color: #595194;
+}
+/* -=-=-=- SPメニュー非表示 -=-=-=- */
+.menu,.fullscreenmenu {
+	display: none;
+}
+/* -=-=-=- PC Topイメージ -=-=-=- */
+.topimg-wrap {
+	margin-top: 40px;
+	position: relative;
+	height: 360px;
+	min-width: 1000px;
+	overflow: hidden;
+}
+.topimg-wrap .width100 {
+	width: 100%;
+}
+.topimg-wrap .top-client {
+	position: absolute;
+	top: 10%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+    font-size: 24px;
+	line-height: 45px;
+	font-weight: 600;
+	color: #fff;
+}
+.topimg-wrap .top-logo {
+	position: absolute;
+	top: 34%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.topimg-wrap .top-catch {
+	position: absolute;
+	top: calc(62% - 24px);
+	left:0;
+	width: 100%;
+	text-align: center;
+	font-size: 48px;
+	line-height: 45px;
+	font-weight: 600;
+	color: #fff;
+}
+.topimg-wrap .top-lead {
+	position: absolute;
+	top: 74%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+	line-height: 28px;
+}
+.topimg-wrap .top-click {
+	position: absolute;
+	top: 61%;
+	left: calc(50% + 315px);
+	text-align: left;
+}
+.batch {
+    animation: click_move 1.5s linear infinite;
+    transform-origin: 50% 50%
+}
+@keyframes click_move {
+    0 {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+    50% {
+        -webkit-transform: translate(0, -15px);
+        -moz-transform: translate(0, -15px);
+        transform: translate(0, -15px)
+    }
+    to {
+        -webkit-transform: translate(0, 0);
+        -moz-transform: translate(0, 0);
+        transform: translate(0, 0)
+    }
+}
+/* -=-=-=- PC メールフォームへのボタン -=-=-=- */
+.btn-wrap {
+width: 100%;
+text-align: center;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+.btn-square-slant { 
+display: inline-block; 
+position: relative; 
+padding: 0.5em 3em; 
+text-decoration: none; 
+background: #595194;/*ボタン色*/ 
+color: #FFF; 
+border-bottom: solid 5px #2A2646;/*ボタン色より暗めに*/ 
+border-right: solid 5px #4E4782;/*ボタン色より暗めに*/
+} 
+.btn-square-slant:before { 
+content: " "; 
+position: absolute; 
+bottom: -5px; 
+left: -1px; 
+width: 0; 
+height: 0; 
+border-width: 0 6px 6px 0px; 
+border-style: solid; 
+border-color: transparent; 
+border-bottom-color: #FFF; 
+} 
+.btn-square-slant:after { 
+content: " "; 
+position: absolute; 
+top: -1px; 
+right: -5px; 
+width: 0; 
+height: 0; 
+border-width: 0px 6px 6px 0px; 
+border-style: solid; 
+border-color: #FFF; 
+border-bottom-color: transparent; 
+} 
+.btn-square-slant:active { 
+/*ボタンを押したとき*/ 
+border:none; 
+-webkit-transform: translate(6px,6px); 
+transform: translate(6px,6px); 
+} 
+.btn-square-slant:active:after, .btn-square-slant:active:before { 
+content: none;
+/*ボタンを押すと線が消える*/ 
+}
+/* -=-=-=- PC 2段目のコピー -=-=-=- */
+.secondcopy {
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+}
+.catchfont {
+	font-size: 33px;
+	font-weight: 600;
+	line-height: 40px;
+}  
+/* -=-=-=- PC 3段目 -=-=-=- */
+.block03 {
+	width: 100%;
+	min-width: 1000px;
+	text-align: center;
+	background-color: #F0EDFF;
+}
+.block03 .b3__inner {
+    width: 750px;
+    margin: 0 auto;
+    text-align: left; 
+}
+.block03 img {
+	width: 100%;
+}
+.block03 .komidashi {
+	font-size: 24px;
+	font-weight: 600;
+    margin: 3em 0 0.5em;
+}
+.block03 .setsumei {
+	font-size: 18px;
+    margin-bottom: 0.5em;
+}
+/* -=-=-=- PC 4段目 -=-=-=- */
+.block04 {
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+.block04 img {
+	width: 100%;
+}
+.block04 .komidashi {
+	font-size: 20px;
+	font-weight: 600;
+}
+.threebox2-L {
+	float: left;
+	width: 25%;
+	margin: 0 0 0 20%;
+	text-align: left;
+	font-size: 12px;
+}
+.threebox2-C {
+	float: left;
+	width: 10%;
+	margin: 0;
+	text-align: left;
+	font-size: 12px;
+	padding-top: 100px;
+}
+.threebox2-C img {
+	width: 100px;
+}
+.threebox2-R {
+	float: left;
+	width: 25%;
+	margin: 0 14% 0 6%;
+	text-align: left;
+	font-size: 12px;
+}
+/* -=-=-=- PC 5段目 -=-=-=- */
+.block05 {
+	width: 100%;
+	min-width: 1000px;
+	text-align: center;
+	background-color: #F0EDFF;
+}
+.block05 img {
+	width:100%;
+}
+.fivebox1 {
+	float: left;
+	width:16%;
+	margin: 0 3% 0 6%;
+	text-align: left;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+}
+.fivebox2 {
+	float: left;
+	width:16%;
+	margin: 0 3% 0 0;
+	text-align: left;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+}
+.fivebox3 {
+	float: left;
+	width:16%;
+	margin: 0 3% 0 0;
+	text-align: left;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+}
+.fivebox4 {
+	float: left;
+	width:16%;
+	margin: 0 3% 0 0;
+	text-align: left;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+}
+.fivebox5 {
+	float: left;
+	width:16%;
+	margin: 0 2% 0 0;
+	text-align: left;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 600;
+}
+.arrow img {
+	width: 62px;
+}
+.list-block05 {
+	text-align: left;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 900px;
+}
+.list-block05 ul li {
+	list-style-type: square;
+}
+.list-caption {
+	width: 90%;
+	max-width: 900px;
+	text-align: right;
+	margin: 0 auto;
+	font-size: 14px;
+}
+/* -=-=-=- PC 6段目 -=-=-=- */
+.block06 {
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+.lightpurple {
+	background-color: #C0B3FF;
+	color: #fff;
+	width: 40%;
+	float: left;
+	margin:0 0 0 7%;
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+.deeppurple {
+	background-color: #595194;
+	color: #fff;
+	width: 40%;
+	float: left;
+	margin:0 6% 0 7%;
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+.planunderline {
+	font-size:24px;
+	text-decoration: underline;
+	font-weight: 600;
+}
+.planulcap {
+	font-size: 16px;
+	line-height: 32px;
+}
+.planbox {
+	width: 92%;
+	margin: 10px 4%;
+}
+.plantitle {
+	color: #fff;
+	font-size: 30px;
+	margin: 0.5em auto 1em;
+	text-decoration: underline;
+}
+.plantxt {
+	text-align: left;
+	line-height: 16px;
+	font-size:14px;
+}
+.planfloat {
+	text-align: left;
+	width: 50%;
+	line-height: 2em;
+}
+.planfloatbox {
+	margin: 0 5% 1em;
+	
+}
+.plan__original_ai_box {
+    margin: 0 5% 1em;
+    text-align: left;
+}
+.planbold {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: left;
+}
+.planbold__2 {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: left;
+	padding-top: 10px;
+	padding-bottom: 0px;
+}
+.planicon img {
+	width: 60px;
+	margin-right: 10px;
+}
+.essicons img {
+	height: 50px;
+}
+.planplus {
+	height: 50px;
+}
+
+.plandetail {
+	width: 96%;
+	background-color: #595194;
+	color: #fff;
+	padding: 20px 2% 2em;
+}
+.plandetail img {
+	width: 100%;
+}
+.planill {
+	width: 5%;
+	float: left;
+}
+.plantext {
+	width: 25%;
+	float: left;
+	text-align: left;
+}
+.plancaption {
+	font-size: 12px;
+	line-height: 14px;
+	margin-top: 0.5em;
+}
+.planservice {
+	width: 100%;
+	text-align: left;
+	font-size: 24px;
+	font-weight: 400;
+}
+.plan__price {
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 600;
+    text-decoration: underline;
+}
+.plankihon {
+	padding-bottom: 2em;
+}
+.planplus {
+	width: 100%;
+	text-align: center;
+}
+.planplus img {
+	width: 50px;
+}
+.planilloption {
+	width: 7%;
+	float: left;
+	margin: 2em 0 0;
+}
+.plantextoption {
+	width: 40%;
+	float: left;
+	text-align: left;
+	margin: 2em 0 0;
+}
+.mgn-r1 {
+	margin-right: 1%;
+}
+.mgn-r2 {
+	margin-right: 2%;
+}
+.mgn-r3 {
+	margin-right: 3%;
+}
+.mgn-r4 {
+	margin-right: 4%;
+}
+.mgn-r5 {
+	margin-right: 5%;
+}
+/* -=-=-=- PC 7段目 -=-=-=- */
+.block07 {
+	width: 100%;
+	min-width: 1000px;
+	text-align: center;
+	background-color: #F0EDFF;
+}
+.prof {
+	width: 25%;
+	margin: 0;
+	float: left;
+}
+.prof2 {
+	width: 25%;
+	margin: 0;
+	float: left;
+	background-color: #595194;
+	color: #fff;
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+.prof3 {
+	width: 25%;
+	margin: 0;
+	float: left;
+}
+.prof4 {
+	width: 25%;
+	margin: 0;
+	float: left;
+	background-color: #595194;
+	color: #fff;
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+.prof img {
+	width: 100%;
+}
+.prof2 img {
+	width: 100%;
+}
+.prof3 img {
+	width: 100%;
+}
+.prof4 img {
+	width: 100%;
+}
+.profname {
+	font-size: 18px;
+	font-weight: 600;
+}
+.proftext {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 0 10px 20px;
+}
+/* -=-=-=- PC 8段目 -=-=-=- */
+.block08{
+	width: 90%;
+	min-width: 900px;
+	background-color: #F0EDFF;
+	padding: 60px 5% 100px;
+	font-size: 24px;
+}
+.block08bold {
+	font-weight: 600;
+}
+.block08bold a {
+	text-decoration: underline;
+	color: #595194;
+}
+/* -=-=-=- PC 8段目（小野さんプロフィール）-=-=-=- */
+.block08-second {
+	width: 800px;
+	margin: 5em auto 0;
+	font-size: 16px;
+}
+#eight2-lpc {
+	font-size: 18px;
+	line-height: 30px;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+#eight2-name {
+	font-size: 28px;
+	font-weight: 600;
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+	padding-left: 30px;
+	letter-spacing: 0.2em;
+	line-height: 70px;
+	
+}
+#eight2-name .eight2-small {
+	font-size: 18px;
+	letter-spacing: 0.2em;
+}
+#eight2-img img {
+	float: left;
+	width: 300px;
+	margin: 0 40px 0 0;
+}
+#eight2-txt {
+	float: left;
+	width: 460px;
+}
+#eight2-url {
+	text-align: center;
+	margin-top: 30px;
+}
+/* -=-=-=- PC 10段目 講演記事 -=-=-=- */
+.block10 {
+	width: 800px;
+	margin: 80px auto;
+	text-align: center;
+}
+.block10-titleimg {
+	margin: 30px 0;
+}
+.block10-01 {
+	width: 100%;
+	text-align: left;
+	margin-bottom: 40px;
+	line-height: 30px;
+}
+.block10-02 {
+	width: 45%;
+	line-height: 30px;
+	text-align: left;
+	padding-top: 30px;
+}
+.block10-03 {
+	width: 50%;
+}
+.block10-03 img {
+	width: 100%;
+}
+.block10-04 {
+	width: 45%;
+	line-height: 30px;
+	text-align: left;
+	margin-right: 5%;
+	padding-top: 30px;
+}
+/* -=-=-=- PC Q&A -=-=-=- */
+.block_q_a {
+    width: 100%;
+	min-width: 1000px;
+	text-align: center;
+	background-color: #F0EDFF;
+    padding-top: 4em;
+}
+.block_q_a .q_a__inner {
+    width: 800px;
+    margin: 0 auto;
+    padding: 2em 0 1em;
+    text-align: left;
+}
+.block_q_a dt,dd {
+    padding-left: 40px;
+    padding-top: 5px;
+}
+.block_q_a dt{
+    background: url("../img/qanda__q.png") no-repeat;
+    background-size: 24px;
+    margin-bottom: 20px;
+    color: #595194;
+}
+.block_q_a dd{
+    background: url("../img/qanda__a.png") no-repeat;
+    background-size: 24px;
+    margin-bottom: 60px;
+}
+/* -=-=-=- PC 9段目 -=-=-=- */
+.block09 {
+	width: 1000px;
+	text-align: center;
+	margin: 0 auto;
+}
+#contents_main {
+	width: 800px;
+	margin:0 auto;
+}
+#contents_main .table_item {
+	padding: 16px 16px 16px 0;
+	width: 154px;
+	text-align: right;
+	font-size: 16px;
+}
+#contents_main .table_text {
+	padding: 20px 0;
+	line-height: 2em;
+	width: 630px;
+}
+#contents_main .teltext {
+	width: 50%;
+	text-align: left;
+}
+.w90per {
+	width: 100%;
+}
+#contents_main .hankaku {
+	ime-mode: inactive;
+}
+#contents_main .entry_button {
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+#contents_main .button_style {
+	-webkit-appearance: none;
+	color: #595194;
+	background-color: #fff;
+	border-color: #595194;
+	border-radius: 5px;
+	width: 120px;
+	height: 2.5em;
+}
+#contents_main .button_left {
+	margin-right: 10px;
+	-webkit-appearance: none;
+	color: #fff;
+	background-color: #595194;
+	border-radius: 5px;
+	width: 120px;
+	height: 2.5em;
+}
+/* -=-=-=- PC メールフォーム関連 -=-=-=- */
+h3 {
+	margin-top: 8em;
+	margin-bottom: 3em;
+	font-size: 24px;
+}
+#thanks_btn {
+	margin-bottom: 12em;
+}
+.errortxt {
+	font-size: 24px;
+}
+.confirmtxt {
+	font-size: 18px;
+	margin-top: 5em;
+}
+.confirmtable {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto 2em;
+}
+.confirmtable table,.confirmtable table td {
+	border: solid 1px #000;
+}
+.confirmtable table {
+	border: solid 1px #000;
+	border-collapse: separate;
+	border-spacing: 3px;
+}
+.confirmtable table td {
+	padding: 7px;
+	margin: 3px;
+}
+.thanks {
+	width: 100%;
+	max-width: 1000px;
+	font-size: 18px;
+	margin: 13em auto 13em;
+	text-align: center;
+}
+/* -=-=-=- PC フッター -=-=-=- */
+.footwrap {
+	background-color: #595194;
+	width: 100%;
+	padding-top: 20px;
+}
+.footer {
+	width: 800px;
+    margin: 0 auto;
+}
+.footlogo {
+	float: left;
+	width: auto;
+	text-align: left;
+}
+#footnav {
+	overflow: hidden;
+	margin-left: 190px;
+}
+#footnav li {
+	float: right;
+	margin-left: 10px;
+	font-size: 12px;
+    line-height: 25px;
+	color: #fff;
+}
+#footnav li a {
+	text-decoration: none;
+	color: #fff;
+}
+.footsign {
+	font-size: 14px;
+	text-align: center;
+	line-height: 24px;
+	margin-top: 0;
+}
+.footsign a {
+	text-decoration: none;
+	color: #fff;
+}
+/* ------------ To the TOP ------------ */
+.pagetop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+}
+.pagetop a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+.pagetop a:hover {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	filter:alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+}
+.pagetop img {
+	width: 80px;
+}
+/* -=-=-=- -=-=-=- 情報セキュリティポリシーページ -=-=-=- -=-=-=- */
+.policy__top {
+    background-color: #ac98c9;
+    padding: 1.6em 0 1em;
+    margin-top: 5em;
+}
+.policy__top_inner {
+    width: 800px;
+    margin: 0 auto;
+}
+.policy__top_inner hr {
+    height: 2px;
+    background-color: #fff;
+    border: none;
+}
+.policy__top_title {
+    width: 100%;
+    text-align: right;
+    color: #fff;
+    font-size: 30px;
+}
+.policy__list {
+    width: 800px;
+    margin: 4em auto 3em;
+}
+.policy__list ol {
+    counter-reset: policy_number;
+    margin-left: 0px;
+}
+.policy__list ol li {
+    padding-bottom: 3em;
+}
+.policy__list ol li .policy__title {
+    color: #595194;
+    font-size: 20px;
+    font-weight: 600;
+}
+.policy__list ol li:before {
+    content: counter(policy_number);
+    counter-increment: policy_number;
+    background-color: #595194;
+    color: #fff;
+    font-size: 20px;
+    display: inline-block;
+
+    line-height: 42px;
+    margin-left: 0px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+/* -=-=-=- -=-=-=- ここからSP用 -=-=-=- -=-=-=- */
+@media (max-width: 750px) {
+.SPbr{
+	display: block;
+}
+/* -=-=-=- SP（ハンバーガーメニュー） -=-=-=- */
+	.PCmenu {
+		display: none;
+	}
+	.fullscreenmenu{
+		display: block;
+	}
+	.menu,
+    .menu span {
+    display: inline-block;
+    -webkit-transition:all .4s;
+    transition: all .4s;
+    box-sizing: border-box;
+    }
+
+    .menu {
+      position: fixed;
+      top: 25px;
+      right:  25px;
+      width: 35px;
+      height: 22px;
+      z-index: 10;
+    }
+
+    .menu span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #DCBE14;
+    z-index: 10;
+    }
+
+    .menu span:nth-of-type(1) {
+    top: 0px;
+    }
+
+    .menu span:nth-of-type(2) {
+    top: 10px;
+    }
+
+    .menu span:nth-of-type(3) {
+    bottom: 0px;
+    }
+
+    .menu.active span:nth-of-type(1) {
+    -webkit-transform: translateY(10px) rotate(45deg);
+    transform: translateY(10px) rotate(45deg);
+	background-color: #595194;
+    }
+
+    .menu.active span:nth-of-type(2) {
+    opacity: 0;
+    }
+
+    .menu.active span:nth-of-type(3) {
+    -webkit-transform: translateY(-10px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
+	background-color: #595194;
+    }
+
+    #nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    visibility:hidden;
+    }
+
+    #nav.active{
+    right: 0;
+    opacity: 1;
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    visibility: visible;
+    }
+
+    #nav ul{
+    margin:20px 0;
+    padding:20px 0;
+    }
+
+    #nav ul li{
+    list-style-type: none;
+	border-bottom: 1px dotted #595194;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+    }
+
+    #nav ul li a{
+    display: block;
+    padding: 20px 0;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    color: #595194;
+    }
+    #nav ul li a:hover {
+    color: #83f;
+    }
+/* -=-=-=- SP（各コンテンツ） -=-=-=- */
+	.topimg-wrap {
+	margin-top: 0;
+	position: relative;
+	height: 400px;
+	min-width: 0;
+	overflow: hidden;
+	}
+	.topimg-wrap .width100 {
+	width: auto;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: -400px;
+	}
+	.topimg-wrap .top-logo {
+	position: absolute;
+	top: 24%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	}
+	.topimg-wrap .top-logo img {
+	height: 38px;
+	width: auto;
+	}
+	.topimg-wrap .top-catch {
+	top: 40%;
+	font-size: 28px;
+	}
+	.topimg-wrap .top-lead {
+	position: absolute;
+	top: 56%;
+	left: -10px;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	line-height: 24px;
+	}
+    .topimg-wrap .top-click {
+        position: absolute;
+        top: 72%;
+        left: calc(50% + 90px);
+        text-align: left;
+    }
+    .topimg-wrap .top-click img {
+        width: 80px;
+    }
+/* -=-=-=- SP メールフォームへのボタン -=-=-=- */
+.btn-wrap {
+width: 80%;
+text-align: center;
+margin-right: auto;
+margin-left: auto;
+
+}
+.btn-square-slant {
+display: inline-block;
+position: relative;
+padding: 0.5em 1em;
+text-decoration: none;
+}
+/* -=-=-=- SP 2段目のコピー -=-=-=- */
+.secondcopy {
+	font-size: 14px;
+}
+.catchfont {
+	font-size: 24px;
+}
+/* -=-=-=- SP 3段目 -=-=-=- */
+.block03 {
+	width: 100%;
+	min-width: 0;
+}
+.block03 .b3__inner {
+    width: 90%;
+    margin: 0 auto;
+    text-align: left; 
+}
+.block03 img {
+	width: 100%;
+}
+.block03 .komidashi {
+	font-size: 21px;
+	font-weight: 600;
+    margin: 2.4em 0 0.5em;
+}
+.block03 .setsumei {
+	font-size: 16px;
+    margin-bottom: 0.5em;
+}
+.threeboxL {
+	width: 90%;
+	margin: 0 5% 2em;
+}
+.threeboxC {
+	width: 90%;
+	margin: 0 5% 2em;
+}
+.threeboxR {
+	width: 90%;
+	margin: 0 5%;
+}
+/* -=-=-=- SP 4段目 -=-=-=- */
+.block04 {
+	width: 100%;
+	margin: 0 0 -2em 0;
+}
+.block04 .komidashi {
+	font-size: 18px;
+	line-height: 22px;
+}
+.threebox2-L {
+	width: 90%;
+	margin: 0 5%;
+	text-align: center;
+	font-size: 14px;
+}
+.threebox2-C {
+	width: 50%;
+	margin: 0 25% 20px;
+	text-align: center;
+	padding-top: 20px;
+}
+.threebox2-C img {
+	width: 100px;
+}
+.threebox2-R {
+	width: 90%;
+	margin: 0 5%;
+	text-align: center;
+	font-size: 14px;
+}
+/* -=-=-=- SP 5段目 -=-=-=- */
+.block05 {
+	width: 100%;
+	min-width: 0;
+}
+.block05 img {
+	width:100%;
+}
+.fivebox1 {
+	width: 41%;
+	margin: 0 5% 0.5em 12%;
+	font-weight: 400;
+}
+.fivebox2 {
+	width: 41%;
+	margin: 0 1% 0.5em 0;
+	font-weight: 400;
+}
+.fivebox3 {
+	width: 41%;
+	margin: 0 5% 0.5em 12%;
+	font-weight: 400;
+}
+.fivebox4 {
+	width: 41%;
+	margin: 0 1% 0.5em 0;
+	font-weight: 400;
+}
+.fivebox5 {
+	width: 42%;
+	margin: 0 25% 0 33%;
+	font-weight: 400;
+}
+.arrow img {
+	width: 62px;
+}
+.list-block05 {
+	text-align: left;
+	margin: 0 3% 0 7%;
+	width: 90%;
+}
+.list-caption {
+	font-size: 12px;
+}
+/* -=-=-=- SP 6段目 -=-=-=- */
+.block06 {
+	width: 100%;
+	margin: -2em 0 0;
+}
+.planunderline {
+	font-size: 21px;
+}
+.planulcap {
+	font-size: 14px;
+	line-height: 16px;
+	padding-bottom: 1em;
+}
+.planbold {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 16px;
+	text-align: left;
+}
+.planplus {
+	height: 50px;
+}
+.plandetail {
+	width: 96%;
+	padding: 30px 2% 15px;
+}
+.plandetail img {
+	width: 100%;
+}
+.planfloat {
+	width: 98%;
+	line-height: 2em;
+	margin-left: 2%;
+	font-size:0.8em;
+}
+.planfloatbox {
+	margin-bottom: 0;
+}
+.planill {
+	width: 12%;
+	padding-bottom: 10px;
+}
+.plantext {
+	width: 83%;
+	padding-bottom: 10px;
+}
+.plancaption {
+	margin-top: 0.5em;
+	padding-bottom: 10px;
+}
+.planbold__2 {
+	padding-top: 0px;
+	padding-bottom: 15px;
+}
+.planservice {
+	font-size: 16px;
+	font-weight: 600;
+}
+.plankihon {
+	padding-bottom: 0;
+}
+.planplus {
+	width: 100%;
+	text-align: center;
+}
+.planplus img {
+	width: 25px;
+}
+.planilloption {
+	width: 12%;
+	margin: 1em 3% 0 0;
+}
+.plantextoption {
+	width: 83%;
+	margin: 1em 0 0;
+}
+.plan__price {
+	width: 100%;
+	text-align: center;
+	font-size: 21px;
+	font-weight: 600;
+    text-decoration: underline;
+}
+/* -=-=-=- SP 7段目 -=-=-=- */
+.block07 {
+	width: 100%;
+	min-width: 0;
+}
+.prof {
+	width: 50%;
+}
+.prof2 {
+	width: 50%;
+}
+.prof3 {
+	width: 50%;
+	background-color: #595194;
+	color: #fff;
+	padding-bottom: 1000px;
+	margin-bottom: -1000px;
+}
+.prof4 {
+	width: 50%;
+	background-color: #F0EDFF;
+	color: #000;
+}
+/* -=-=-=- SP 8段目 -=-=-=- */
+.block08{
+	width: 90%;
+	min-width: 0;
+	padding: 20px 5% 50px;
+	font-size: 20px;
+	line-height: 40px;
+}
+/* -=-=-=- SP 8段目（小野さんプロフィール）-=-=-=- */
+.block08-second {
+	width: 100%;
+	margin: 5em auto 0;
+	font-size: 16px;
+}
+#eight2-lpc {
+	font-size: 14px;
+	line-height: 21px;
+	padding-left: 1.5em;
+}
+#eight2-name {
+	font-size: 21px;
+	padding-left: 0px;
+	line-height: 50px;
+	text-align: center;
+}
+#eight2-name .eight2-small {
+	font-size: 14px;
+	letter-spacing: 0.2em;
+}
+#eight2-img {
+	width: 60%;
+	margin: 0 auto;
+}
+#eight2-img img {
+	float: none;
+	width: 100%;
+	margin: 0;
+}
+#eight2-txt {
+	float: none;
+	width: 100%;
+	line-height: 24px;
+	font-size: 14px;
+	padding-top: 1em;
+}
+#eight2-url {
+	text-align: center;
+	margin-top: 30px;
+	line-height: 24px;
+}
+/* -=-=-=- SP 10段目 講演記事 -=-=-=- */
+.block10 {
+	width: 100%;
+	margin: 40px auto 0;
+	text-align: center;
+}
+.block10-titleimg {
+	margin: 30px 0;
+}
+.block10-titleimg img {
+	width: 100%;
+}
+.block10-01 {
+	width: 90%;
+	margin: 0 auto 40px;
+	line-height: 30px;
+}
+.block10-02 {
+	width: 90%;
+	padding-top: 0px;
+	margin: 0 5% 20px;
+}
+.block10-03 {
+	width: 80%;
+	margin: 0 10%;
+}
+.block10-03 img {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.block10-04 {
+	width: 90%;
+	padding-top: 0px;
+	margin: 0 5% 20px;
+}
+/* -=-=-=- SP Q&A -=-=-=- */
+.block_q_a {
+	min-width: 0;
+    padding-top: 4em;
+}
+.block_q_a .q_a__inner {
+    width: 90%;
+    padding: 2em 0 1em;
+}
+/* -=-=-=- SP 9段目 -=-=-=- */
+.block09 {
+	width: 94%;
+	margin: 0 3%;
+}
+#contents_main {
+	width: 90%;
+	margin: 0 auto;
+}
+#contents_main table {
+	font-size: 14px;
+	margin-bottom: 45px;
+	width: 100%;
+}
+#contents_main .table_title {
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 0.1em;
+	background-color: #b83061;
+	text-align: center;
+	padding:  15px 0;
+}
+#contents_main .table_item {
+	width: 30%;
+	padding:  12px 0;
+	text-align: center;
+}
+#contents_main .table_text {
+	width: 70%;
+	padding: 12px 0;
+}
+#contents_main .w90per {
+	width: 90%;
+}
+#contents_main .teltext {
+	width: 70%;
+}
+
+/* -=-=-=- SP メールフォーム関連 -=-=-=- */
+h3 {
+	margin-top: 7em;
+	margin-bottom: 2em;
+	font-size: 21px;
+}
+#thanks_btn {
+	margin-bottom: 5em;
+}
+.confirmtable {
+	width: 90%;
+	max-width: 1000px;
+	margin: 0 auto 2em;
+}
+.confirmtable table td {
+	padding: 3px;
+}
+/* -=-=-=- SP フッター -=-=-=- */
+.footwrap {
+	width: 100%;
+	padding-top: 20px;
+}
+.footer {
+	width: 90%;
+    margin: 0 5%;
+}
+.footlogo {
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+#footnav {
+	display: none;
+}
+#footnav li {
+	float: left;
+	margin-left: 10px;
+	font-size: 12px;
+    line-height: 25px;
+	color: #fff;
+}
+#footnav li a {
+	text-decoration: none;
+	color: #fff;
+}
+.footsign {
+	font-size: 12px;
+	margin-top: -1em;
+}
+.footsign a {
+	text-decoration: none;
+	color: #fff;
+}
+/* ------------ SP To the TOP ------------ */
+.pagetop img {
+	width: 60px;
+}
+/* -=-=-=- -=-=-=- 情報セキュリティポリシーページ -=-=-=- -=-=-=- */
+.policy__top {
+    margin-top: 4.4em;
+}
+.policy__top_inner {
+    width: 90%;
+}
+.policy__top_inner img {
+    width: 60%;
+}
+.policy__top_inner hr {
+    height: 1px;
+}
+.policy__top_title {
+    width: 100%;
+    text-align: right;
+    color: #fff;
+    font-size: 20px;
+}
+.policy__list {
+    width: 90%;
+    margin: 3em auto 3em;
+}
+}/* -=-=-=- SP End -=-=-=- */

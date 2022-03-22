@@ -1,0 +1,597 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>LegalSifter</title>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-5QKWCSV');
+	</script>
+	<!-- End Google Tag Manager -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="Description" content="LegalSifterは英文契約書をレビューするAIシステムです。">
+	<meta name="Keywords" content="LegalSifter,英文契約書,レビュー,AI">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/legalsifter.css">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script>
+		$(function() {
+			$('.menu').on('click', function() {
+				$(this).toggleClass('active');
+				$("#nav").toggleClass('active');
+			})
+		})
+		$(function() {
+			$('#nav a').on('click', function() {
+				$('#nav').toggleClass('active');
+				$(".menu").toggleClass('active');
+			})
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			var pagetop = $('.pagetop');
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 70) {
+					pagetop.fadeIn();
+				} else {
+					pagetop.fadeOut();
+				}
+			});
+			pagetop.click(function() {
+				$('body, html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
+	<script>
+		/*スムーズスクロール*/
+		$(function() {
+			// #で始まるアンカーをクリックした場合に処理
+			$('a[href^=#]').click(function() {
+				// スクロールの速度
+				var speed = 1000; // ミリ秒
+				// アンカーの値取得
+				var href = $(this).attr("href");
+				// 移動先を取得
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				// 移動先を数値で取得
+				var position = target.offset().top;
+				// スムーススクロール
+				$('body,html').animate({
+					scrollTop: position
+				}, speed, 'swing');
+				return false;
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QKWCSV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div class="PCmenu">
+		<a href="#">
+			<h1>
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="197.285px" height="32px" viewBox="276.558 143.96 197.285 32" enable-background="new 276.558 143.96 197.285 32" xml:space="preserve">
+					<g>
+						<path fill="#595194" d="M307.493,169.288v-24.827h2.271v22.791h12.453v2.036H307.493z" />
+						<path fill="#595194" d="M326.133,161.145c0,3.681,1.723,6.812,5.952,6.812c2.428-0.078,4.464-1.725,4.934-4.15h2.193
+		c-0.626,3.76-4.072,6.344-7.832,6.03c-5.169,0-7.597-4.465-7.597-9.164c0-4.699,2.584-9.163,7.753-9.163
+		c5.796,0,7.989,4.229,7.989,9.635H326.133L326.133,161.145z M337.254,159.264c-0.235-3.368-2.036-5.874-5.639-5.874
+		c-3.603,0-5.169,2.819-5.404,5.874H337.254z" />
+						<path fill="#595194" d="M355.738,151.979h2.115c0,1.175-0.157,2.585-0.157,3.917v10.417c0,3.445,0.157,7.049-3.681,8.851
+		c-1.253,0.627-2.584,0.86-3.916,0.783c-3.211,0-6.814-1.097-6.814-4.621h2.271c0.235,2.036,2.663,2.741,4.855,2.741
+		c2.741,0.078,5.091-2.036,5.248-4.777v-3.211c-1.175,2.036-3.29,3.211-5.639,3.211c-5.169,0-7.44-3.994-7.44-8.693
+		c0-4.699,2.115-9.007,7.362-9.007c2.35,0,4.464,1.175,5.717,3.211v-0.157L355.738,151.979L355.738,151.979z M350.099,153.311
+		c-3.759,0-5.326,3.759-5.326,6.971c0,3.212,1.566,6.97,5.404,6.97c3.838,0,5.482-3.682,5.482-7.049c0-3.368-1.88-6.813-5.561-6.813
+		L350.099,153.311L350.099,153.311z" />
+						<path fill="#595194" d="M372.263,157.149c-0.235-2.82-1.566-3.759-4.073-3.759c-2.193,0-3.994,0.626-4.229,2.976h-2.193
+		c0.548-3.524,3.211-4.856,6.5-4.856c3.837,0,6.187,1.723,6.109,5.717v8.224c0,1.331,0.078,2.74,0.157,3.915h-2.115v-2.584
+		l-0.079,0.233c-1.253,1.803-3.211,2.82-5.404,2.82c-2.898,0.234-5.561-1.88-5.795-4.855c-0.235-2.429,1.253-4.7,3.524-5.482
+		c2.271-1.018,5.326-0.626,7.832-0.783L372.263,157.149z M367.094,167.879c4.464,0,5.326-3.76,5.169-7.361
+		c-2.898,0.078-9.085-0.471-9.085,3.916c0,1.879,1.566,3.445,3.446,3.445H367.094z" />
+						<path fill="#595194" d="M381.427,169.288h-2.036v-24.827h2.036V169.288z" />
+						<path fill="#595194" d="M390.512,161.378c-0.392,2.192,1.098,4.308,3.289,4.699c0.393,0.078,0.783,0.078,1.254,0
+		c2.897,0,4.776-1.331,4.776-3.446c0-2.113-1.566-2.584-4.776-3.367c-5.953-1.488-9.164-3.211-9.164-7.519
+		c0-4.307,2.897-7.753,9.868-7.753c2.819-0.235,5.562,0.862,7.52,2.898c1.019,1.332,1.487,2.976,1.41,4.621h-5.17
+		c0.078-2.036-1.565-3.759-3.604-3.837h-0.47c-2.506,0-4.072,1.331-4.072,3.368c0,2.271,1.801,2.741,5.404,3.603
+		c4.307,1.018,8.536,2.193,8.536,7.048c0,4.465-3.76,8.066-10.573,8.066c-9.555,0-9.555-6.107-9.633-8.535L390.512,161.378
+		L390.512,161.378z" />
+						<path fill="#595194" d="M408.916,144.461h5.404v4.464h-5.404V144.461z M409.073,151.979h5.091v17.309h-5.091V151.979z" />
+						<path fill="#595194" d="M419.02,155.583h-2.584v-3.603h2.584v-2.428c0-3.054,1.02-5.561,5.952-5.561
+		c0.939,0,1.803,0.078,2.741,0.157v3.524c-0.312-0.079-0.705-0.079-1.097-0.079c-2.584,0-2.584,1.332-2.584,2.271v2.036h3.211v3.603
+		h-3.211v13.784h-5.014L419.02,155.583L419.02,155.583z" />
+						<path fill="#595194" d="M441.653,169.055c-1.253,0.391-2.584,0.547-3.994,0.547c-5.091,0-5.091-3.211-5.091-4.699v-9.477h-3.367
+		v-3.446h3.289v-3.368l5.091-1.879v5.169h4.151v3.446h-4.151v7.832c0,1.566,0,2.584,2.271,2.584c0.549,0,1.176,0,1.724-0.078
+		L441.653,169.055z" />
+						<path fill="#595194" d="M448.232,161.927c0,1.097,0,4.62,3.523,4.62c1.488,0.078,2.819-0.939,3.055-2.428h4.62
+		c-0.078,1.41-0.626,2.74-1.564,3.76c-1.646,1.487-3.838,2.191-6.109,2.036c-2.271,0.078-4.464-0.705-6.107-2.192
+		c-1.566-1.881-2.43-4.309-2.271-6.813c-0.235-3.211,1.097-6.266,3.603-8.224c1.41-0.94,3.134-1.488,4.855-1.41
+		c2.977-0.157,5.718,1.566,7.049,4.229c0.861,2.037,1.253,4.151,1.02,6.344L448.232,161.927z M454.654,158.715
+		c0-0.783,0-3.916-3.055-3.916c-2.271,0-3.211,1.879-3.29,3.916H454.654L454.654,158.715z" />
+						<path fill="#595194" d="M463.27,156.209c0-0.861-0.155-3.368-0.233-4.308h4.776l0.078,3.368c0.627-1.488,1.802-3.603,5.952-3.368
+		v4.621c-5.169-0.47-5.481,2.193-5.481,4.308v8.536h-5.092V156.209L463.27,156.209z" />
+						<path fill="#595194" d="M302.716,157.07c0,7.206-5.874,13.079-13.079,13.079c-7.205,0-13.079-5.795-13.079-13.079
+		c0-7.205,5.874-13.079,13.079-13.079C296.842,143.991,302.716,149.865,302.716,157.07z M292.3,160.673h3.837
+		c0.313,0.862,1.175,1.254,2.036,0.94c0.862-0.313,1.253-1.175,0.94-2.037c-0.313-0.862-1.175-1.253-2.036-0.94
+		c-0.47,0.157-0.783,0.548-0.94,0.94h-4.308l-3.837,4.464c-0.783-0.313-1.723,0.078-2.037,0.938
+		c-0.313,0.783,0.079,1.725,0.94,2.037c0.783,0.312,1.723-0.078,2.037-0.939c0.156-0.471,0.156-0.939-0.079-1.331
+		C288.854,164.746,292.299,160.673,292.3,160.673z M290.968,156.366l-6.109-7.127c0.392-0.783,0.078-1.723-0.705-2.115
+		c-0.783-0.392-1.723-0.078-2.115,0.705c-0.392,0.783-0.078,1.723,0.705,2.114c0.392,0.235,0.94,0.235,1.332,0l5.482,6.344
+		l-6.188,7.283c-0.861-0.312-1.723,0.156-2.036,0.939c-0.313,0.861,0.157,1.723,0.94,2.036c0.861,0.313,1.723-0.155,2.036-0.938
+		c0.157-0.471,0.078-0.94-0.157-1.332L290.968,156.366z M286.112,156.366l-3.916-4.542c0.235-0.548-0.078-1.097-0.548-1.332
+		c-0.548-0.157-1.096,0.079-1.331,0.626c-0.235,0.548,0.078,1.097,0.548,1.332c0.156,0.078,0.313,0.078,0.47,0.078l3.368,3.916
+		l-4.542,5.326c-0.548-0.078-1.097,0.313-1.175,0.861c-0.078,0.549,0.313,1.098,0.861,1.176c0.548,0.078,1.097-0.312,1.175-0.861
+		v-0.471L286.112,156.366z M298.722,155.817h-3.211l-4.542-5.247c0.392-0.783,0.157-1.723-0.626-2.193
+		c-0.783-0.392-1.723-0.156-2.193,0.626c-0.47,0.784,0,1.88,0.705,2.271c0.392,0.235,0.94,0.235,1.332,0.078l4.777,5.561h3.681
+		c0.313,0.861,1.175,1.253,2.036,0.939c0.861-0.313,1.253-1.175,0.94-2.036s-1.175-1.253-2.037-0.94
+		C299.27,155.034,298.878,155.426,298.722,155.817" />
+					</g>
+				</svg>
+			</h1>
+		</a>
+		<div id="PCnav">
+			<ul>
+				<li><a href="#anker1">対応契約書</a></li>
+				<li>|</li>
+				<li><a href="#anker2">料金プラン</a></li>
+				<li>|</li>
+				<li><a href="#anker3">専門家</a></li>
+				<li>|</li>
+				<li><a href="policy.html">情報セキュリティポリシー</a></li>
+				<li>|</li>
+				<li><a href="#anker4">お申し込み・お問い合わせ</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="fullscreenmenu">
+		<div id="nav">
+			<ul>
+				<li><a href="index.html"><img src="img/overlayMenuHeader.png" alt="LegalSifter" width="100%"></a></li>
+				<li><a href="#anker1">対応契約書</a></li>
+				<li><a href="#anker2">料金プラン</a></li>
+				<li><a href="#anker3">専門家</a></li>
+				<li><a href="policy.html">情報セキュリティポリシー</a></li>
+				<li><a href="#anker4">お申し込み・お問い合わせ</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="menu">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+
+	<div class="topimg-wrap">
+		<img src="img/topimg.jpg" class="width100" alt="">
+		<p class="top-client">企業法務部の皆様へ</p>
+		<p class="top-logo"><img src="img/logo-whiteh45.png" alt=""></p>
+		<p class="top-catch">英文契約書をAIでレビュー</p>
+		<p class="top-lead">その英文契約書にサインする前に<br class="SPbr">LegalSifterでレビューしましょう。<br>常に進化し続けるLegalSifterのAIは<br class="SPbr">迅速で的確なチェックを行い、<br class="SPbr">コストを抑えることが可能です。</p>
+		<p class="top-click"><a href="#anker4"><img src="img/top-click.png" alt="LegalSifterに関するお問合せ・デモ説明会のお申込みはこちら"></a></p>
+	</div>
+
+	<div class="btn-wrap">
+		<a href="#anker4" class="btn-square-slant">LegalSifterに関するお問合せ・デモ説明会のお申込みはこちら</a>
+	</div>
+
+	<div class="secondcopy mgn-btm3em">
+		<p class="catchfont mgn-btm03em">Sift before you sign</p>
+		<p>欧米は契約社会。契約書の内容は絶対的です。<br>
+			だからこそ世界中の専門家の知識でできたAI<br class="SPbr">“LegalSifter”で的確なチェックを。</p>
+	</div>
+
+	<div class="block03 pdg-top4em pdg-btm3em">
+		<p class="catchfont mgn-btm03em">LegalSifterなら簡単３ステップ</p>
+		<div class="b3__inner">
+			<div class="komidashi">①アップロードする</div>
+			<div class="setsumei">PDFもしくはMicrosoftWord形式で、交渉中の契約書をアップロードしてください。</div>
+			<img src="img/wind-sift.png" alt="">
+
+			<div class="komidashi">②レビューする</div>
+			<div class="setsumei">LegalSifterがどのようなビジネス的、法的なコンセプトが欠けているか、また存在しているかを指摘し、それに関する情報をライブラリから例示します。</div>
+			<img src="img/wind-miss.png" alt="">
+
+			<div class="komidashi">③編集する</div>
+			<div class="setsumei">契約書をWord, Google Docs, もしくはその他のソフトで編集できます。</div>
+			<img src="img/wind-edit.png" alt="">
+		</div>
+	</div>
+
+	<div class="block04 pdg-top4em pdg-btm2em" id="anker1">
+		<p class="catchfont mgn-btm1em">LegalSifterは数多くの<br class="SPbr">英文契約書のレビューが可能です</p>
+		<div class="overflow">
+			<div class="threebox2-L"><span class="komidashi">LegalSifterが<br>現在対応可能な契約書</span><br>
+				秘密保持契約書<br>
+				サービス契約書<br>
+				コンサルティング契約書<br>
+				ソフトウェアライセンス契約書<br>
+				SaaS利用規約<br>
+				物品供給契約書　等
+			</div>
+			<div class="threebox2-C"><img src="img/mark_h100.png" alt=""></div>
+			<div class="threebox2-R"><span class="komidashi">LegalSifterが<br>現在学習中の文書</span><br>
+				資産購入契約書<br>
+				商業融資契約書<br>
+				臨床試験契約書<br>
+				データプライバシー契約書<br>
+				雇用契約書<br>
+				エンジニアリング及び建設契約書<br>
+				フランチャイズ契約書<br>
+				知的財産譲渡契約書<br>
+				非競争契約書<br>
+				外部委託契約書<br>
+				求人サービス契約書<br>
+				委託研究契約書　等
+			</div>
+		</div>
+	</div>
+
+	<div class="btn-wrap">
+		<a href="#anker4" class="btn-square-slant">LegalSifterに関するお問合せ・デモ説明会のお申込みはこちら</a>
+	</div>
+
+	<div class="block05 pdg-top3em pdg-btm3em">
+		<p class="catchfont mgn-btm1em">海外取引での契約書にまつわる<br>よくある５つのトラブル</p>
+		<div class="overflow">
+			<div class="fivebox1">①取引先が作成した<br>英文契約書の取り扱い<br><img src="img/trouble-01.png" alt=""></div>
+			<div class="fivebox2">②契約書中に<br>隠されている条件<br><img src="img/trouble-02.png" alt=""></div>
+			<div class="fivebox3">③多すぎる関係者<br><br><img src="img/trouble-03.png" alt=""></div>
+			<div class="fivebox4">④単独での交渉<br><br><img src="img/trouble-04.png" alt=""></div>
+			<div class="fivebox5">⑤時間と高い費用が<br>かかる弁護士<br><img src="img/trouble-05.png" alt=""></div>
+		</div>
+		<div class="arrow pdg-top2em"><img src="img/arrow.png" alt=""></div>
+		<p class="catchfont mgn-btm1em">LegalSifterであれば<br>これらのトラブルを回避できます</p>
+		<div class="list-block05">
+			<ul>
+				<li>専門家によるチェックでLegalSifterを使用した場合、エンドユーザライセンス契約書 (EULA) の審査時間が20%減少しました。</li>
+				<li>専門家以外によるチェックでLegalSifterを使用した場合、時間が 35 分から 2 分に短縮されました。</li>
+				<li>専門家はLegalSifter が発見したミスの内の 95%を発見しました。</li>
+				<li>専門家以外の場合は（研修を受けた後でも）LegalSifterが発見したミスの内の20%しか発見できませんでした。</li>
+			</ul>
+		</div>
+		<div class="list-caption pdg-top1em">- Fortune 500 Contracts Center of Excellence Lead, <br class="SPbr">October 2018</div>
+	</div>
+
+
+
+	<div class="block06 pdg-top4em pdg-btm3em" id="anker2">
+		<p class="catchfont mgn-btm15em">料金プラン</p>
+		<div class="plandetail">
+
+			<p class="planservice pdg-btm1em">■日本語コメントが用意されている契約書の種類</p>
+			<div class="overflow planfloatbox">
+				<div class="flotL planfloat">
+					秘密保持契約書：双方向・開示者側・受領者側
+				</div>
+				<div class="flotL planfloat">
+					業務委託契約書：委託者側・ 受託者側
+				</div>
+				<div class="flotL planfloat">
+					コンサルティング契約書：依頼者側・提供者側
+				</div>
+				<div class="flotL planfloat">
+					ソフトウェア利用許諾契約書：利用者側・許諾者側
+				</div>
+				<div class="flotL planfloat">
+					SaaS利用規約：利用者側・提供者側
+				</div>
+				<div class="flotL planfloat">
+					売買契約書：買主側・売主側
+				</div>
+			</div>
+
+			<p class="planservice pdg-top2em">■サービス内容</p>
+			<div class="overflow">
+				<div class="planilloption mgn-r2">
+					<img src="img/ess-sift.png" alt="">
+				</div>
+				<div class="plantextoption mgn-r2">
+					<p class="planbold">システム利用回数は無制限</p>
+					<p class="plancaption">必要な分だけ英文契約書をレビューすることができます。</p>
+				</div>
+				<div class="planilloption mgn-r2">
+					<img src="img/ess-upgrade.png" alt="">
+				</div>
+				<div class="plantextoption">
+					<p class="planbold">毎週行われるアップグレード</p>
+					<p class="plancaption">週に１回のペースでLegalSifterのシステム・AIをアップグレードしています。</p>
+				</div>
+			</div>
+			<div class="overflow">
+				<div class="planilloption mgn-r2">
+					<img src="img/ess-tech.png" alt="">
+				</div>
+				<div class="plantextoption mgn-r2">
+					<p class="planbold">日本語技術サポートと導入・運用支援</p>
+					<p class="plancaption">日本語技術サポートと導入・運用支援をチャットワークにて行います。</p>
+				</div>
+			</div>
+			<p class="plan__price pdg-btm2em pdg-top2em">サービス利用料金　<br class="SPbr">月額１０万円<br class="SPbr">／１ユーザー・１年契約（税別）</p>
+
+		</div>
+		<div class="plandetail">
+			<p class="planservice pdg-btm1em">■貴社のオリジナル審査基準をAIに設定</p>
+			<div class="plan__original_ai_box">
+				英文契約書のレビューについては、企業様においてオリジナルの審査基準（プレイブック）をお持ちであることが多いと思います（例えば損害賠償の上限や、解約条件など）。貴社オリジナルの審査基準を貴社専用のAIに設定・適用し、日本語でのコメントを出力させることにより、貴社基準での英文契約書レビューをご支援いたします。
+			</div>
+			<p class="plan__price pdg-btm1em pdg-top2em">１つの契約書の種類と立場につき、<br class="SPbr">３０万円（税別）</p>
+		</div>
+	</div>
+
+	<div class="btn-wrap pdg-btm2em">
+		<a href="#anker4" class="btn-square-slant">LegalSifterに関するお問合せ・デモ説明会のお申込みはこちら</a>
+	</div>
+
+	<div class="block07 pdg-top3em" id="anker3">
+		<p class="catchfont pdg-btm15em">LegalSifterを活用する<br class="SPbr">世界中の法律事務所</p>
+		<div class="overflow">
+			<div class="prof">
+				<img src="img/logo-tlt.png">
+				<p class="profname">TLT LLP</p>
+				<p class="proftext">Bristol, United Kingdom</p>
+			</div>
+			<div class="prof2">
+				<img src="img/logo-ascenta.png">
+				<p class="profname">Ascenta</p>
+				<p class="proftext">Melbourne, Australia</p>
+			</div>
+			<div class="prof3">
+				<img src="img/logo-fernaro.png">
+				<p class="profname">Fornaro Law</p>
+				<p class="proftext">Illinois, United States</p>
+			</div>
+			<div class="prof4">
+				<a href="https://pm-lawyer.com/service/contract-negotiation/english-agreement/" target="_blank"><img src="img/logo-fts.png"></a>
+				<p class="profname">First & TandemSprint LPC</p>
+				<p class="proftext">Tokyo, Japan</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="block08">
+		<span class="block08bold"><a href="https://tandemsprint.com/" target="_blank">TademSprint, Inc. （米国カリフォルニア州）</a></span>及び <span class="block08bold"><a href="https://pm-lawyer.com/" target="_blank">弁護士法人ファースト＆タンデムスプリント法律事務所（日本）</a></span>は、英文契約書をAIでレビューする米国LegalSifter社のパートナーとして、日本における英文契約書レビューシステムの企業や法律事務所への導入と、業務への活用を支援しています。
+		<div class="block08-second">
+			<div id="eight2-lpc">
+				TademSprint, Inc.　代表取締役<br>
+				弁護士法人ファースト＆タンデムスプリント<br class="SPbr">法律事務所　代表弁護士
+			</div>
+			<div id="eight2-name"><span class="eight2-small">弁護士　</span>小野 智博</div>
+			<div class="overflow">
+				<div id="eight2-img"><img src="img/profile.jpg"></div>
+				<div id="eight2-txt">
+					慶應義塾大学環境情報学部、青山学院大学法科大学院卒業。企業法務、国際取引、知的財産権、訴訟に関する豊富な実務経験を持つ。日本及び海外の企業を代理して商取引に関する法務サービスを提供している。2008年に弁護士としてユアサハラ法律特許事務所に入所。2012年に米国カリフォルニア州に赴任し、 Yorozu Law Group (San Francisco) 及び Makman and Matz LLP (San Mateo) にて、米国に進出する日本企業へのリーガルサービスを専門として、経験を積む。2014年に帰国。カリフォルニアで得た経験を活かし、日本企業の海外展開支援に本格的に取り組む。2017年に米国カリフォルニア州法人TandemSprint, Inc.の代表取締役に就任し、米国への進出支援を事業化する。2018年に弁護士法人ファースト＆タンデムスプリント法律事務所を藤井総弁護士と共同開設。世界市場で戦う日本企業をビジネスと法律の両面でサポートしている。 </div>
+			</div>
+			<div id="eight2-url">
+				<a href="https://pm-lawyer.com/" target="_blank">
+					弁護士法人<br class="SPbr">ファースト＆タンデムスプリント法律事務所<br class="SPbr">・国際ビジネス法務サービスWebサイト
+				</a>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="block10">
+		<span class="catchfont">
+			「渉外業務・国際業務開拓<br class="SPbr">フォーラム」にて<br>
+			LegalSifterを紹介しました。</span>
+		<div class="block10-titleimg"><img src="img/forum-title.jpg"></div>
+
+		<div class="block10-01">
+			2019年8月、船井総合研究所様（東証一部）の渉外業務・国際業務開拓フォーラムに登壇し、LegalSifterを紹介しました。同社は6000社のクライアントを有する法律業界ではナンバーワンのコンサルティング会社であり、その中の渉外業務に主眼を置いた研究会において開催された「渉外業務・国際業務開拓フォーラム」での講演でした。
+		</div>
+		<div class="overflow">
+			<div class="flotR block10-02">
+				当日は、英文契約書のレビューを取扱業務とすることを検討している１５を超える法律事務所の代表が参加され、AIの業務への活用について議論が行われました。
+			</div>
+			<div class="flotL block10-03"><img src="img/forum-1.jpg"></div>
+		</div>
+		<div class="overflow">
+			<div class="flotL block10-04">
+				弊所からは、LegalSifterの特徴や英文契約書レビュー業務への活用法をご説明し、参加者からは英文契約を含めた渉外業務のマネジメントやマーケティングについて質疑が行われ、この分野への関心の高まりが感じられました。
+			</div>
+			<div class="flotL block10-03"><img src="img/forum-2.jpg"></div>
+		</div>
+		<div class="overflow">
+			<div class="flotR block10-02">
+				船井総合研究所様からは、LegalSifterの実際のデモが行われ、AIを活用した英文契約書レビューの依頼の仕方やフィードバックの内容など、具体的な活用事例とマーケティング事例が紹介されました。導入に前向きな事務所も出てきており、更なるフォローを続けて参ります。
+			</div>
+			<div class="flotL block10-03"><img src="img/forum-3.jpg"></div>
+		</div>
+	</div>
+
+	<div class="btn-wrap pdg-btm2em">
+		<a href="#anker4" class="btn-square-slant">LegalSifterに関するお問合せ・デモ説明会のお申込みはこちら</a>
+	</div>
+
+
+
+	<div class="block_q_a">
+		<p class="catchfont">よくあるご質問</p>
+		<div class="q_a__inner">
+			<dl>
+				<!-- Q1 -->
+				<dt>LegalSifterはコンプライアンス遵守をどのように行っているのですか？（例えばSSAE 16 SOC1またはSOC2タイプ2レポートを毎年作成するなど）</dt>
+				<dd>LegalSifterはAmazon Web Services （AWS）上にLegalSifterをホストしています。AWSのSOC遵守状況は『Amazon SOCコンプライアンスサイト』にてご確認いただけます。</dd>
+			</dl>
+			<dl>
+				<!-- Q2 -->
+				<dt>LegalSifterのデータセンターとオフサイトのデータ保管（DR）施設はどこに設置されていますか？</dt>
+				<dd>LegalSifterのマルチテナント環境は、AWS北バージニアおよびシンガポールに置かれています。詳しくは『Amazonグローバルインフラストラクチャ』をご確認ください。</dd>
+			</dl>
+			<dl>
+				<!-- Q3 -->
+				<dt>データが他の顧客のデータと混ざってしまう可能性はありますか？</dt>
+				<dd>LegalSifterによる研究開発目的でのデータ利用をお客様が許可したうえで、LegalSifterが当該研究開発を実施する場合を除き、お客様のデータが他のお客様データと混ざることはありません。</dd>
+			</dl>
+			<dl>
+				<!-- Q4 -->
+				<dt>どのようなタイプのデータベース環境がデータの保存に用いられていますか？</dt>
+				<dd>基本的にマルチテナント方式を採用しています。</dd>
+			</dl>
+			<dl>
+				<!-- Q5 -->
+				<dt>LegalSifterが、私たちのデータに対し、知的財産権を含めた権利を、契約を通じて取得することはありますか？ 例えば顧客データをマーケット情報として照合に使い、第三者によるマーケティング活動のために顧客行動を販売するなど、顧客データを自社のビジネス上の利益に用いることはありますか？ </dt>
+				<dd>LegalSifterが契約情報の利用についてお客様の許可を求める場合、それは機械学習アルゴリズム「Sifter」の研究を目的とする場合のみです。Sifterが改良されればすべてのお客様がその恩恵を受けることができる一方、Sifterを改良するにはお客様のデータが必要です。お客様はそれぞれ、ご利用契約時に研究開発目的でのデータ使用を拒否することができます。LegalSifterはまた、お客様の名称およびロゴをマーケティング資料に使用する際には、予めお客様に許可を求めます。お客様の書面による明白な許可が事前に得られない場合には、LegalSifterはお客様のデータに対し何らの権利も取得せず、またマーケティング目的におけるお客様のロゴ使用も行いません。</dd>
+			</dl>
+			<dl>
+				<!-- Q6 -->
+				<dt>監査またはセキュリティ上のインシデントが起きた場合、第三者を経由したLegalSifterへの組織監査を実施できますか？</dt>
+				<dd>はい、可能です。</dd>
+			</dl>
+			<dl>
+				<!-- Q7 -->
+				<dt>データをエクスポートする際の手順はどうなっていますか？</dt>
+				<dd>LegalSifterは、すべてのお客様に対しエクスポートボタンを提供しており、選別後の文書をMicrosoft Word（ワード）にエクスポートすることができます。</dd>
+			</dl>
+			<dl>
+				<!-- Q8 -->
+				<dt>LegalSifter のデータ保存期間はいつまでですか？</dt>
+				<dd>LegalSifter製品上でユーザーが契約書を削除（ゴミ箱へ移動したうえでゴミ箱から削除）した場合、削除から15日後にLegalSifterは当該契約ファイルを恒久的に除去します。ただしLegalSifterは、削除を実施したアカウントが存在する限り、ファイル名称、 文書種類、アップロード元のアカウント名のみをレポート目的で保存します。<br>LegalSifterでは、設定により除去機能を無効にできます。例えば訴訟などのお客様の必要性に応じ、この設定を用いることができます。<br>会社または個人によるLegalSifterの使用終了または試用期間終了から30日後、LegalSifterは恒久的にすべてのデータをデータベースおよびデータストアから除去します。<br>なお、当該除去はLegalSifter製品のみを対象としており、研究開発用のデータ保管場所には適用されません。お客様がLegalSifterと締結した契約上でその保存につき同意している場合には、契約書のコピーは当該保管場所に引き続き保存されます。</dd>
+			</dl>
+			<dl>
+				<!-- Q9 -->
+				<dt>訴訟などの目的のために文書へのアクセス可能期間を延長したい場合にはどうすれば良いでしょうか？</dt>
+				<dd>LegalSifterでは、お客様はLegalSifterのシステムからデータが削除された日時を指定し、例えば訴訟などの目的に基づきお客様のデータの内容を分離して管理することができます。</dd>
+			</dl>
+			<dl>
+				<!-- Q10 -->
+				<dt>データの漏洩の可能性があった場合のLegalSifterの対処方法はどうなっていますか？</dt>
+				<dd>次のいずれかが発覚した場合には、LegalSifterはお客様に対し、24時間以内にその旨通知します：（a）ネットワークへまたは計算機器に対する不正行為により、お客様のデータへの不正アクセスまたはその可能性が生じた場合。（b）お客様のデータの悪用、開示もしくは紛失の可能性、または所在不明の事態が生じた場合。</dd>
+			</dl>
+			<dl>
+				<!-- Q11 -->
+				<dt>LegalSifterの情報セキュリティポリシーはどうなっていますか？</dt>
+				<dd><a href="policy.html">こちらの情報セキュリティポリシーのページ</a>をご参照ください。</dd>
+			</dl>
+		</div>
+	</div>
+
+	<div class="block09" id="anker4">
+		<p class="catchfont pdg-top3em pdg-btm15em">LegalSifterに関する<br class="SPbr">お申し込み・お問い合わせ</p>
+		<article id="contents">
+			<form id="contents_main" method="post" action="mail.php">
+				<table>
+					<tr>
+						<td class="table_item">貴社名</td>
+						<td class="table_text"><input type="text" class="w90per" name="貴社名"></td>
+					</tr>
+					<tr>
+						<td class="table_item">ご担当者名</td>
+						<td class="table_text"><input type="text" class="w90per" name="ご担当者名"></td>
+					</tr>
+					<tr>
+						<td class="table_item">E-Mail</td>
+						<td class="table_text"><input type="text" class="w90per hankaku" name="Email"></td>
+					</tr>
+					<tr>
+						<td class="table_item">電話番号</td>
+						<td class="table_text"><input type="tel" class="w90per hankaku" name="電話番号"></td>
+					</tr>
+					<tr>
+						<td class="table_item">内容</td>
+						<td class="table_text">
+							<textarea name="お問い合わせ内容" rows="3" cols="10" class="w90per"></textarea>
+						</td>
+					</tr>
+				</table>
+				<div class="entry_button">
+					<input class="button_left" type="submit" value="確認する">
+					<input class="button_style" type="reset" value="リセット">
+				</div>
+			</form>
+		</article>
+	</div>
+
+	<div class="footwrap">
+		<div class="footer overflow">
+			<div class="footlogo">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="154.1px" height="25px" viewBox="0 0 154.1 25" style="enable-background:new 0 0 154.1 25;" xml:space="preserve">
+					<style type="text/css">
+						.st0 {
+							fill: #FFFFFF;
+						}
+					</style>
+					<g>
+						<path class="st0" d="M24.2,19.8V0.4h1.8v17.8h9.7v1.6H24.2z" />
+						<path class="st0" d="M38.7,13.4c0,2.9,1.3,5.3,4.6,5.3c1.9-0.1,3.5-1.3,3.9-3.2h1.7c-0.5,2.9-3.2,5-6.1,4.7c-4,0-5.9-3.5-5.9-7.2
+		s2-7.2,6.1-7.2c4.5,0,6.2,3.3,6.2,7.5H38.7L38.7,13.4z M47.4,12c-0.2-2.6-1.6-4.6-4.4-4.6c-2.8,0-4,2.2-4.2,4.6H47.4z" />
+						<path class="st0" d="M61.9,6.3h1.7c0,0.9-0.1,2-0.1,3.1v8.1c0,2.7,0.1,5.5-2.9,6.9c-1,0.5-2,0.7-3.1,0.6c-2.5,0-5.3-0.9-5.3-3.6
+		h1.8c0.2,1.6,2.1,2.1,3.8,2.1c2.1,0.1,4-1.6,4.1-3.7v-2.5c-0.9,1.6-2.6,2.5-4.4,2.5c-4,0-5.8-3.1-5.8-6.8c0-3.7,1.7-7,5.8-7
+		c1.8,0,3.5,0.9,4.5,2.5V8.3L61.9,6.3L61.9,6.3z M57.5,7.3c-2.9,0-4.2,2.9-4.2,5.4c0,2.5,1.2,5.4,4.2,5.4c3,0,4.3-2.9,4.3-5.5
+		C61.8,10.1,60.3,7.4,57.5,7.3L57.5,7.3L57.5,7.3z" />
+						<path class="st0" d="M74.8,10.3c-0.2-2.2-1.2-2.9-3.2-2.9c-1.7,0-3.1,0.5-3.3,2.3h-1.7c0.4-2.8,2.5-3.8,5.1-3.8
+		c3,0,4.8,1.3,4.8,4.5v6.4c0,1,0.1,2.1,0.1,3.1h-1.7v-2L74.8,18c-1,1.4-2.5,2.2-4.2,2.2c-2.3,0.2-4.3-1.5-4.5-3.8
+		c-0.2-1.9,1-3.7,2.8-4.3c1.8-0.8,4.2-0.5,6.1-0.6L74.8,10.3z M70.7,18.7c3.5,0,4.2-2.9,4-5.8c-2.3,0.1-7.1-0.4-7.1,3.1
+		c0,1.5,1.2,2.7,2.7,2.7L70.7,18.7L70.7,18.7z" />
+						<path class="st0" d="M81.9,19.8h-1.6V0.4h1.6V19.8z" />
+						<path class="st0" d="M89,13.6c-0.3,1.7,0.9,3.4,2.6,3.7c0.3,0.1,0.6,0.1,1,0c2.3,0,3.7-1,3.7-2.7c0-1.7-1.2-2-3.7-2.6
+		c-4.7-1.2-7.2-2.5-7.2-5.9c0-3.4,2.3-6.1,7.7-6.1c2.2-0.2,4.3,0.7,5.9,2.3c0.8,1,1.2,2.3,1.1,3.6h-4c0.1-1.6-1.2-2.9-2.8-3h-0.4
+		c-2,0-3.2,1-3.2,2.6c0,1.8,1.4,2.1,4.2,2.8c3.4,0.8,6.7,1.7,6.7,5.5c0,3.5-2.9,6.3-8.3,6.3c-7.5,0-7.5-4.8-7.5-6.7L89,13.6L89,13.6
+		z" />
+						<path class="st0" d="M103.4,0.4h4.2v3.5h-4.2V0.4z M103.5,6.3h4v13.5h-4V6.3z" />
+						<path class="st0" d="M111.3,9.1h-2V6.3h2V4.4c0-2.4,0.8-4.3,4.6-4.3c0.7,0,1.4,0.1,2.1,0.1v2.8c-0.2-0.1-0.6-0.1-0.9-0.1
+		c-2,0-2,1-2,1.8v1.6h2.5V9h-2.5v10.8h-3.9L111.3,9.1L111.3,9.1z" />
+						<path class="st0" d="M129,19.6c-1,0.3-2,0.4-3.1,0.4c-4,0-4-2.5-4-3.7V9h-2.6V6.3h2.6V3.6l4-1.5v4h3.2v2.7h-3.2V15c0,1.2,0,2,1.8,2
+		c0.4,0,0.9,0,1.3-0.1L129,19.6z" />
+						<path class="st0" d="M134.1,14c0,0.9,0,3.6,2.8,3.6c1.2,0.1,2.2-0.7,2.4-1.9h3.6c-0.1,1.1-0.5,2.1-1.2,2.9c-1.3,1.2-3,1.7-4.8,1.6
+		c-1.8,0.1-3.5-0.6-4.8-1.7c-1.2-1.5-1.9-3.4-1.8-5.3c-0.2-2.5,0.9-4.9,2.8-6.4c1.1-0.7,2.4-1.2,3.8-1.1c2.3-0.1,4.5,1.2,5.5,3.3
+		c0.7,1.6,1,3.2,0.8,5L134.1,14z M139.1,11.5c0-0.6,0-3.1-2.4-3.1c-1.8,0-2.5,1.5-2.6,3.1H139.1L139.1,11.5z" />
+						<path class="st0" d="M145.9,9.6c0-0.7-0.1-2.6-0.2-3.4h3.7l0.1,2.6c0.5-1.2,1.4-2.8,4.6-2.6v3.6c-4-0.4-4.3,1.7-4.3,3.4v6.7h-4V9.6
+		L145.9,9.6z" />
+						<path class="st0" d="M20.4,10.2c0,5.6-4.6,10.2-10.2,10.2C4.6,20.5,0,15.9,0,10.2C0,4.6,4.6,0,10.2,0C15.8,0,20.4,4.6,20.4,10.2z
+		 M12.3,13.1h3c0.2,0.7,0.9,1,1.6,0.7c0.7-0.2,1-0.9,0.7-1.6c-0.2-0.7-0.9-1-1.6-0.7c-0.4,0.1-0.6,0.4-0.7,0.7h-3.4l-3,3.5
+		c-0.6-0.2-1.3,0.1-1.6,0.7C7.1,17,7.4,17.8,8.1,18c0.6,0.2,1.3-0.1,1.6-0.7c0.1-0.4,0.1-0.7-0.1-1C9.6,16.2,12.3,13.1,12.3,13.1z
+		 M11.3,9.7L6.5,4.1c0.3-0.6,0.1-1.3-0.6-1.7S4.6,2.4,4.3,3S4.2,4.4,4.8,4.7c0.3,0.2,0.7,0.2,1,0l4.3,5l-4.8,5.7
+		c-0.7-0.2-1.3,0.1-1.6,0.7c-0.2,0.7,0.1,1.3,0.7,1.6c0.7,0.2,1.3-0.1,1.6-0.7c0.1-0.4,0.1-0.7-0.1-1L11.3,9.7z M7.5,9.7L4.4,6.1
+		c0.2-0.4-0.1-0.9-0.4-1C3.5,5,3.1,5.2,2.9,5.6C2.8,6,3,6.4,3.4,6.6c0.1,0.1,0.2,0.1,0.4,0.1l2.6,3.1l-3.5,4.2
+		c-0.4-0.1-0.9,0.2-0.9,0.7c-0.1,0.4,0.2,0.9,0.7,0.9c0.4,0.1,0.9-0.2,0.9-0.7v-0.4L7.5,9.7z M17.3,9.3h-2.5l-3.5-4.1
+		c0.3-0.6,0.1-1.3-0.5-1.7c-0.6-0.3-1.3-0.1-1.7,0.5c-0.4,0.6,0,1.5,0.6,1.8c0.3,0.2,0.7,0.2,1,0.1l3.7,4.3h2.9
+		c0.2,0.7,0.9,1,1.6,0.7c0.7-0.2,1-0.9,0.7-1.6c-0.2-0.7-0.9-1-1.6-0.7C17.7,8.7,17.4,9,17.3,9.3" />
+					</g>
+				</svg>
+			</div>
+			<div id="footnav">
+				<ul>
+					<li><a href="#anker4">お申し込み・お問い合わせ</a></li>
+					<li>|</li>
+					<li><a href="policy.html">情報セキュリティポリシー</a></li>
+					<li>|</li>
+					<li><a href="#anker3">専門家</a></li>
+					<li>|</li>
+					<li><a href="#anker2">料金プラン</a></li>
+					<li>|</li>
+					<li><a href="#anker1">対応契約書</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footsign pdg-btm1em pdg-top1em">
+			<a href="https://tandemsprint.com/" target="_blank">TandemSprint, Inc.</a><br>
+			<a href="https://first-tandemsprint.com/" target="_blank">弁護士法人ファースト＆タンデムスプリント法律事務所</a>
+		</div>
+	</div>
+	<p class="pagetop">
+		<a href="#"><img src="img/2top.png" alt="TOP"></a>
+	</p>
+</body>
+
+</html>
