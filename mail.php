@@ -11,7 +11,7 @@
 $site_top = "https://legalsifter.jp";
 
 // 管理者メールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください)
-$to = "ono@tandemsprint.com,a.katayama@tandemsprint.com";
+$to = "ono@tandemsprint.com,a.katayama@tandemsprint.com,first-tandemsprint@cast-er.com";
 
 //-----------------必須設定　ここまで--------------------------
 
